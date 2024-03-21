@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
 
+import '../pages/HomePage.dart';
+
 
 
 
@@ -25,7 +27,7 @@ class CurrencyPage extends StatelessWidget {
                   child: ElevatedButton(
                     onPressed: (){
         
-                      userController.updateCurrency("RUP");
+                      userController.updateCurrency("\u{20B9}");
 
                     },
                     child: const SizedBox(
@@ -43,7 +45,7 @@ class CurrencyPage extends StatelessWidget {
                 Card(
                   child: ElevatedButton(
                     onPressed: (){
-                      userController.updateCurrency("USD");
+                      userController.updateCurrency("\$");
                     },
                     child: const SizedBox(
                       height: 100,
@@ -62,6 +64,7 @@ class CurrencyPage extends StatelessWidget {
             ElevatedButton(onPressed: (){
                     print("get name is ${userController.user.name}");
                     print("get name is ${userController.user.currency}");
+                    Get.to(HomePage());
                   }, child: const Text("Next")),
           ],
 
